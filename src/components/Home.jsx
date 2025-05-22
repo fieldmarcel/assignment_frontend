@@ -4,7 +4,7 @@ import {FaGoogle,FaFacebook, FaYoutube, FaPinterest, FaTwitch } from "react-icon
 
 const Home = () => {
   return (
-    <div className="lg:mt-10 mt-10 bg-gray-100 px-4 py-10 text-gray-800 font-sans">
+    <div className="lg:mt-12 mt-12 bg-gray-100 px-4 py-10 text-gray-800 font-sans">
       <section className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Simplify Your Life with Our <br className="hidden sm:block" /> Todo App

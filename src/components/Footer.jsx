@@ -4,14 +4,20 @@ import {
   FaXTwitter,FaLinkedinIn,
   FaYoutube,
   FaRegCopyright,} from "react-icons/fa6";
-
+import { TbNotes } from "react-icons/tb";
 const Footer = () => {
   return (
     <div className="flex flex-col md:m-2 border-4 border-gray-600 ">
       <div className="flex flex-col lg:flex-row justify-between gap-10  px-6 py-10 md:px-16">
         
         <div className="flex flex-col max-w-md">
-          <img src="/" alt="logo" className="w-24 h-10 mb-4 bg-gray-300" />
+<div className="relative w-16 h-16 bg-white rounded-2xl shadow-[-10px_10px_25px_-5px_rgba(128,128,128,1)]">
+  <TbNotes className="absolute top-1 left-6 text-red-500 text-xl -rotate-20" />
+
+  <span className="absolute top-1/2 left-[60%]  -rotate-3 transform -translate-y-1/2 -translate-x-1/3 text-black text-2xl font-bold">
+    doList
+  </span>
+</div>
           <p className="mb-3">
             Subscribe to our newsletter for the latest features and updates delivered to you.
           </p>

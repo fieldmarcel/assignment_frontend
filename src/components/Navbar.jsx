@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { TbNotes } from "react-icons/tb";
+
 const Navbar = ({setFormOpen}) => {
   const [openNav, setopenNav] = useState(false);
   const toggleMenu = () =>{
@@ -16,8 +18,15 @@ setFormOpen(true);
     <nav className="bg-white shadow-md w-full fixed top-0 left-0 z-50">
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         <div>
-          <img src="/" alt="logo" className="h-8 w-auto" />
-        </div>
+ <div className="relative w-12 h-12 bg-white rounded-2xl shadow-[-10px_10px_25px_-5px_rgba(128,128,128,1)]">
+  <TbNotes className="absolute  left-6 text-red-500 text-xl -rotate-20" />
+
+  <span className="absolute top-1/2 left-[70%]  -rotate-3 transform -translate-y-1/2 -translate-x-1/3 text-black text-2xl font-bold">
+    doList
+  </span>
+</div>
+  
+    </div>
 
         
         <div className="hidden md:flex gap-6 items-center">
