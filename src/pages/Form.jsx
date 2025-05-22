@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-const Form = ({setFormOpen,setgreetOpen}) => {
+const Form = ({setFormOpen,setgreetOpen, onSubmit}) => {
   const [firstName, setFirstName] = useState("");
 const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -46,8 +46,14 @@ const handleLanguageChange = (lang) => {
     };
     const handleDone = () => {
         if(validationfunction()){
-            alert("Form submitted successfully");
-        setFormOpen(false);
+const data ={
+    name: `${firstName} ${lastName}`,
+    gender,language: languages.join(", "),
+    email
+};
+onSubmit(data);
+
+            setFormOpen(false);
         setgreetOpen(true);
 
 
@@ -117,23 +123,36 @@ const handleLanguageChange = (lang) => {
           </div>
         </div>
 
-        <div className="mb-4">
-          <p className="text-sm mb-2">Languages</p>
-          <div className="flex gap-4 flex-wrap">
-            {["English", "Hindi", "Marathi"].map((lang) => (
-              <label key={lang} className="flex items-center gap-1">
-                <input
-                  type="checkbox"
-                  value={lang}
-                  onChange={() => handleLanguageChange(lang)}
-                  checked={languages.includes(lang)}
-                />
-                {lang}
-              </label>
-            ))}
-          </div>
-        </div>
-
+       <div className="mb-4">
+  <p className="text-sm mb-2">Languages</p>
+  <div className="flex gap-4 flex-wrap">
+    <label className="flex items-center   gap-1">
+      <input
+        type="checkbox" value="English"
+        onChange={ ()  => handleLanguageChange("English")}
+              checked={languages.includes("English")}
+      />
+      English
+    </label>
+              <label className="flex items-center gap-1">
+      <input
+        type="checkbox"
+              value="Hindi"
+        onChange={() => handleLanguageChange("Hindi")}
+        checked={languages.includes("Hindi")}
+      />
+      Hindi
+    </label>
+    <label className="flex items-center gap-1">
+      <input
+        type="checkbox"
+              value="Marathi"
+        onChange={() => handleLanguageChange("Marathi")}checked={languages.includes("Marathi")}
+      />
+      Marathi
+    </label>
+  </div>
+</div>
         <div className="mb-4">
           <label className="text-sm mb-1 block">Email Address</label>
           <input

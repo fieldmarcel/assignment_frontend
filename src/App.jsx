@@ -13,16 +13,22 @@ const App = () => {
     const [formOpen, setFormOpen] = useState(false);
     const [greetOpen, setgreetOpen] = useState(false);
       const [submit, setsubmit] = useState([]);
-
+const handleformsubmit =(data)=>{
+    setsubmit((prev)=>[...prev, data]);
+    setFormOpen(false);
+    setgreetOpen(true);
+}
   return (
     <Router>
       <Navbar setFormOpen={setFormOpen} />
-      {formOpen && <Form setFormOpen={setFormOpen} setgreetOpen={setgreetOpen}/>}
+      {formOpen && <Form setFormOpen={setFormOpen} setgreetOpen={setgreetOpen} onSubmit={handleformsubmit}/>}
 {greetOpen && <Greet setgreetOpen={setgreetOpen} />}
       <Home/>
       <Cards/>
       <Testimonials/>
       <Join/>
+      {!formOpen  && <Table data={submit} />}
+
       <Footer/>
       <Routes>
 
