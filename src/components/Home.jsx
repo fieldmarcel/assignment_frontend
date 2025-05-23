@@ -1,8 +1,15 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
 import {FaGoogle,FaFacebook, FaYoutube, FaPinterest, FaTwitch } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const Home = () => {
+const Home = ({setFormOpen}) => {
+  const handleForm = () => {
+setFormOpen(true);
+    setopenNav(false);
+    
+
+}
   return (
     <div className="lg:mt-12 mt-12 bg-gray-100 px-4 py-10 text-gray-800 font-sans">
       <section className="text-center mb-10">
@@ -16,7 +23,7 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-        <button className="bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-600 transition">
+        <button onClick={handleForm} className="bg-red-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-600 transition">
           Get Started
         </button>
         <button className="border-2 border-red-500 px-6 py-3 rounded-full font-semibold text-red-500 hover:bg-red-100 transition">
@@ -25,7 +32,6 @@ const Home = () => {
       </section>
 
       <section className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-6xl mx-auto">
-        {/* Left Panel */}
         <div className="bg-red-500 text-white rounded-3xl p-6 md:p-10 md:h-[36rem] w-full md:w-2/3">
           <h2 className="text-4xl md:text-[4.25rem] font-bold mb-4 leading-tight">
             <span className="text-gray-300">Organize.</span> <br /> Achieve. <br /> Relax.
@@ -44,7 +50,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Panel */}
         <div className="relative w-full md:w-1/3 md:h-[36rem] h-[20rem] rounded-xl overflow-hidden shadow-lg">
           <div
             className="absolute inset-0 bg-cover bg-top md:bg-center"
@@ -65,7 +70,13 @@ const Home = () => {
                 <span className="h-2 w-2 rounded-full border border-white" />
               </div>
             </div>
-
+<div>
+              < div className="flex justify-between items-center mt-4">
+                  <FaAngleLeft className="text-white text-2xl cursor-pointer" />
+                  <FaAngleRight className="text-white text-2xl cursor-pointer" />
+                
+</div>
+</div>
             <div className="flex justify-between items-end">
               <div className="text-sm text-gray-700">
                 <h3 className="font-semibold">Logoiosum</h3>
@@ -80,7 +91,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Social Icons Section */}
       <section className="flex justify-center items-center flex-wrap gap-8 mt-10 text-lg">
         <div className="flex items-center gap-2">
           <FaGoogle className="text-gray-600 text-3xl" />

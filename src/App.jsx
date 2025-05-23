@@ -23,7 +23,7 @@ const handleformsubmit =(data)=>{
       <Navbar setFormOpen={setFormOpen} />
       {formOpen && <Form setFormOpen={setFormOpen} setgreetOpen={setgreetOpen} onSubmit={handleformsubmit}/>}
 {greetOpen && <Greet setgreetOpen={setgreetOpen} />}
-      <Home/>
+      <Home setFormOpen={setFormOpen}/>
       <Cards/>
       <Testimonials/>
       <Join/>

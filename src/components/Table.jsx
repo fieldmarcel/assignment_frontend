@@ -15,13 +15,13 @@ const Table = ({ data }) => {
               <th className="border px-3 py-2 text-left">Language</th>
               <th className="border px-3 py-2 text-left">Email</th>
             </tr>
-          </thead>
-          <tbody>
+        </thead>
+      <tbody>
             {data.map((entry, index) => (
               <tr key={index} className="text-left">
                 <td className="border px-3 py-2">{entry.name}</td>
-                <td className="border px-3 py-2">{entry.gender}</td>
-                <td className="border px-3 py-2">{entry.language}</td>
+                 <td className="border px-3 py-2">{entry.gender}</td>
+                   <td className="border px-3 py-2">{entry.language}</td>
                 <td className="border px-3 py-2">{entry.email}</td>
               </tr>
             ))}

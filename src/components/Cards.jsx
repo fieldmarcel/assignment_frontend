@@ -12,28 +12,28 @@ const Cards = () => {
     {
       title: 'User-Friendly Interface',
       description:
-        'Our platform makes it easy to navigate and manage your tasks efficiently.',
+        'Our platform offers seamless task management to boost your efficiency.',
       icon: <FaMobileAlt className='text-4xl text-red-500' />,
       num: '01'
     },
     {
       title: 'Collaborate & Share Effortlessly',
       description:
-        'Choose from a variety of customizable themes to personalize your to-do list experience.',
+        'Invite team members to work togetherand achieve your goals faster.',
       icon: <RiTelegram2Line className='text-4xl text-red-500' />,
       num: '02'
     },
     {
       title: 'Effortless Collaboration',
       description:
-        'Collaborate with others by sharing your to-do lists and assigning tasks to team members.',
+        'Invite team members to work togetherand achieve your goals faster.',
       icon: <FaUserCheck className='text-4xl text-red-500' />,
       num: '03'
     },
     {
       title: 'Seamless Access',
       description:
-        'Access your to-do list across all your devices with seamless syncing and cloud storage.',
+        'Stay connected and manage your tasks on the go with ease.',
       icon: <LuNotebookTabs className='text-4xl text-red-500' />,
       num: '04'
     }
